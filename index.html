@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport"
+	      content="width=device-width, initial-scale=1.0">
+	<meta name="description"
+	      content="">
+	<link rel="stylesheet"
+	      type="text/css"
+	      href="style.css">
+	<title>Calculator</title>
+</head>
+<body>
+<div class="parent container">
+	<div class="block">
+		<h2 class="h2">Выбор материала</h2>
+		<form name="material"
+		      onclick="viewTypeMaterial()">
+			<label for="mat1">
+				<input type="radio"
+				       name="mat"
+				       id="mat1"
+				       value="glass">Стекло
+			</label>
+			<label for="mat2">
+				<input type="radio"
+				       name="mat"
+				       id="mat2"
+				       value="mirror">Зеркало
+			</label>
+		</form>
+	</div>
+	<div class="block">
+		<div class="glass invisible">
+			<h2 class="h2">Вид стекла</h2>
+			<form name="glass"
+			      onclick="choiceViewTypeMaterial()">
+				<label for="gl1">
+					<input type="radio"
+					       name="glass"
+					       id="gl1"
+					       value="transparent">Прозрачное
+				</label>
+				<label for="gl2">
+					<input type="radio"
+					       name="glass"
+					       id="gl2"
+					       value="clarified">Осветленное
+				</label>
+				<label for="gl3">
+					<input type="radio"
+					       name="glass"
+					       id="gl3"
+					       value="matt">Матовое
+				</label>
+				<label for="gl4">
+					<input type="radio"
+					       name="glass"
+					       id="gl4"
+					       value="gray">Серое
+				</label>
+			</form>
+		</div>
+		<div class="mirror invisible">
+			<h2 class="h2">Вид зеркала</h2>
+			<form name="mirror"
+			      onclick="choiceViewTypeMaterial()">
+				<label for="mr1">
+					<input type="radio"
+					       name="glass"
+					       id="mr1"
+					       value="silver">Серебро
+				</label>
+				<label for="mr2">
+					<input type="radio"
+					       name="glass"
+					       id="mr2"
+					       value="bronze">Бронза
+				</label>
+				<label for="mr3">
+					<input type="radio"
+					       name="glass"
+					       id="mr3"
+					       value="graphite">Графит
+				</label>
+			</form>
+		</div>
+	</div>
+	<div class="block">
+		<div class="transparent invisible">
+			<h2 class="h2">Толщина стекла</h2>
+			<form name="transparent"
+			      onclick="choiceThickness()">
+				<label for="3">
+					<input type="radio"
+					       name="transparent"
+					       id="3"
+					       value="3">3 мм
+				</label>
+				<label for="4">
+					<input type="radio"
+					       name="transparent"
+					       id="4"
+					       value="4">4 мм
+				</label>
+				<label for="5">
+					<input type="radio"
+					       name="transparent"
+					       id="5"
+					       value="5">5 мм
+				</label>
+				<label for="6">
+					<input type="radio"
+					       name="transparent"
+					       id="6"
+					       value="6">6 мм
+				</label>
+				<label for="8">
+					<input type="radio"
+					       name="transparent"
+					       id="8"
+					       value="8">8 мм
+				</label>
+				<label for="10">
+					<input type="radio"
+					       name="transparent"
+					       id="10"
+					       value="10">10 мм
+				</label>
+				<label for="12">
+					<input type="radio"
+					       name="transparent"
+					       id="12"
+					       value="12">12 мм
+				</label>
+			</form>
+		</div>
+		<div class="clarified invisible">
+			<h2 class="h2">Толщина стекла</h2>
+			<form name="clarified"
+			      onclick="choiceThickness()">
+				<label for="2_4">
+					<input type="radio"
+					       name="clarified"
+					       id="2_4"
+					       value="4">4 мм
+				</label>
+				<label for="2_6">
+					<input type="radio"
+					       name="clarified"
+					       id="2_6"
+					       value="6">6 мм
+				</label>
+				<label for="2_8">
+					<input type="radio"
+					       name="clarified"
+					       id="2_8"
+					       value="8">8 мм
+				</label>
+				<label for="2_10">
+					<input type="radio"
+					       name="clarified"
+					       id="2_10"
+					       value="10">10 мм
+				</label>
+				<label for="2_12">
+					<input type="radio"
+					       name="clarified"
+					       id="2_12"
+					       value="12">12 мм
+				</label>
+			</form>
+		</div>
+		<div class="matt invisible">
+			<h2 class="h2">Толщина стекла</h2>
+			<form name="matt"
+			      onclick="choiceThickness()">
+				<label for="3_4">
+					<input type="radio"
+					       name="matt"
+					       id="3_4"
+					       value="4">4 мм
+				</label>
+				<label for="3_6">
+					<input type="radio"
+					       name="matt"
+					       id="3_6"
+					       value="6">6 мм
+				</label>
+				<label for="3_8">
+					<input type="radio"
+					       name="matt"
+					       id="3_8"
+					       value="8">8 мм
+				</label>
+				<label for="3_10">
+					<input type="radio"
+					       name="matt"
+					       id="3_10"
+					       value="10">10 мм
+				</label>
+			</form>
+		</div>
+		<div class="gray invisible">
+			<h2 class="h2">Толщина стекла</h2>
+			<form name="gray"
+			      onclick="choiceThickness()">
+				<label for="4_4">
+					<input type="radio"
+					       name="gray"
+					       id="4_4"
+					       value="4">4 мм
+				</label>
+				<label for="4_6">
+					<input type="radio"
+					       name="gray"
+					       id="4_6"
+					       value="6">6 мм
+				</label>
+				<label for="4_8">
+					<input type="radio"
+					       name="gray"
+					       id="4_8"
+					       value="8">8 мм
+				</label>
+				<label for="4_10">
+					<input type="radio"
+					       name="gray"
+					       id="4_10"
+					       value="10">10 мм
+				</label>
+			</form>
+		</div>
+		<div class="silver invisible">
+			<h2 class="h2">Толщина зеркала</h2>
+			<form name="silver"
+			      onclick="choiceThickness()">
+				<label for="5_1">
+					<input type="radio"
+					       name="silver"
+					       id="5_1"
+					       value="4">4 мм
+				</label>
+				<label for="5_2">
+					<input type="radio"
+					       name="silver"
+					       id="5_2"
+					       value="6">6 мм
+				</label>
+			</form>
+		</div>
+		<div class="bronze invisible">
+			<h2 class="h2">Толщина зеркала</h2>
+			<form name="bronze"
+			      onclick="choiceThickness()">
+				<label for="6_1">
+					<input type="radio"
+					       name="bronze"
+					       id="6_1"
+					       value="4">4 мм
+				</label>
+				<label for="6_2">
+					<input type="radio"
+					       name="bronze"
+					       id="6_2"
+					       value="6">6 мм
+				</label>
+			</form>
+		</div>
+		<div class="graphite invisible">
+			<h2 class="h2">Толщина зеркала</h2>
+			<form name="graphite"
+			      onclick="choiceThickness()">
+				<label for="7_1">
+					<input type="radio"
+					       name="graphite"
+					       id="7_1"
+					       value="4">4 мм
+				</label>
+			</form>
+		</div>
+	</div>
+	<div class="block">
+		<div class="formula invisible">
+			<h2 class="h2">Форма изделия</h2>
+			<form name="formula"
+			      onclick="viewDimensions()">
+				<label for="rect">
+					<input type="radio"
+					       name="formula"
+					       id="rect"
+					       value="rect">Прямоугольник
+				</label>
+				<p class="rect invisible">
+					<input
+							type="number"
+							name="height"
+							min="0"
+							placeholder="Длинна"
+					>мм
+					<input
+							type="number"
+							name="width"
+							min="0"
+							placeholder="Ширина"
+							oninput="takeSize()"
+					>мм
+				</p>
+				<label for="circle">
+					<input type="radio"
+					       name="formula"
+					       id="circle"
+					       value="circle">Круг
+				</label>
+				<p class="circle invisible">
+					<input
+							type="number"
+							name="diam"
+							min="0"
+							placeholder="диаметр"
+							oninput="takeSize()"
+					>мм
+				</p>
+			</form>
+		</div>
+	</div>
+	<div class="block">
+		<div class="treatment invisible">
+			<h2 class="h2">Обработка</h2>
+			<form name="treatment"
+			      onclick="choiceMethodTreatment()">
+				<label for="tr1">
+					<input type="radio"
+					       name="treatment"
+					       id="tr1">Резка
+				</label>
+				<label for="tr2">
+					<input type="radio"
+					       name="treatment"
+					       id="tr2"
+					       value="6">Полировка
+				</label>
+				<label for="tr3">
+					<input type="radio"
+					       name="treatment"
+					       id="tr3"
+					       value="6">Фацет
+				</label>
+			</form>
+		</div>
+	</div>
+	<div class="block">
+		<div class="total invisible">
+			<h2 class="h2">Стоимость заказа</h2>
+			<div>
+				<p>Количество
+					<button class="plus" onclick="add()">+</button>
+					<input type="text" class="show" value="1">
+					<button class="minus" onclick="minus()">-</button>
+				</p>
+			</div>
+			<div class="display">
+
+			</div>
+			<input type="submit"
+			       value="Оформить заказ">
+			<a href="">Сбросить текущий рассчет</a>
+		</div>
+	</div>
+</div>
+
+<button class="testBtn">Вывести все показания заказа на экран</button>
+<div class="tablo">
+
+</div>
+<script src="script.js"></script>
+</body>
+</html>
